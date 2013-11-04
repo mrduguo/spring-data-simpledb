@@ -7,8 +7,8 @@ public final class AmazonSimpleDBClientFactory {
 
     private AmazonSimpleDBClientFactory() { }
 
-	public static final String TEST_AMAZON_ACCESS_KEY = "AKIAIVX775TRPPSZTEMQ";
-	public static final String TEST_AMAZON_PRIVATE_KEY = "Nzy6w0iq8JI+DHgdiPPiuqixiMoWQmPhWFgQzOZY";
+	public static final String TEST_AMAZON_ACCESS_KEY = System.getProperty("awsAccessKey");
+	public static final String TEST_AMAZON_PRIVATE_KEY = System.getProperty("awsSecretKey");
 
 	public static AmazonSimpleDBClient getTestClient() {
 		return new AmazonSimpleDBClient(new AWSCredentials() {

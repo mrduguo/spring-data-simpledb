@@ -13,7 +13,7 @@ public class SimpleDBJavaConfiguration extends AbstractSimpleDBConfiguration {
 
 	@Override
 	public AWSCredentials getAWSCredentials() {
-		return new AWSCredentials("AKIAIVX775TRPPSZTEMQ", "Nzy6w0iq8JI+DHgdiPPiuqixiMoWQmPhWFgQzOZY");
+		return new AWSCredentials(System.getProperty("awsAccessKey"), System.getProperty("awsSecretKey"));
 	}
 
 	@Override
