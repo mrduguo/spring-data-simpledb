@@ -4,11 +4,18 @@
 
     <groupId>com.threepillar.labs</groupId>
     <artifactId>spring-data-simpledb-sdk</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Spring Data SimpleDB SDK</name>
     <url>http://maven.apache.org</url>
     <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav</artifactId>
+                <version>1.0-beta-2</version>
+            </extension>
+        </extensions>
          <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -19,7 +26,19 @@
                     <target>${java.compiler.version}</target>
                 </configuration>
             </plugin>
-
+             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-source-plugin</artifactId>
+                 <version>2.1.2</version>
+                 <executions>
+                     <execution>
+                         <id>attach-sources</id>
+                         <goals>
+                             <goal>jar</goal>
+                         </goals>
+                     </execution>
+                 </executions>
+             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -113,6 +132,11 @@
     </build>
     
 	<distributionManagement>
+        <repository>
+            <id>dist-repo-releases</id>
+            <name>dist-repo-releases</name>
+            <url>${distRepoReleasesUrl}</url>
+        </repository>
 		<snapshotRepository>
 			<id>3pillarlabs</id>
 			<name>3pillarlabs-snapshots</name>

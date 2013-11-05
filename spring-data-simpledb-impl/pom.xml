@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.threepillar.labs</groupId>
 		<artifactId>spring-data-simpledb-sdk</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
 	<name>Spring Data SimpleDB Implementation</name>
@@ -29,7 +29,7 @@
         <dependency>
             <groupId>com.threepillar.labs</groupId>
             <artifactId>spring-data-simpledb-parser</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
 
