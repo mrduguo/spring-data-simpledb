@@ -4,7 +4,7 @@
 
     <groupId>com.threepillar.labs</groupId>
     <artifactId>spring-data-simpledb-sdk</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.9.0</version>
     <packaging>pom</packaging>
     <name>Spring Data SimpleDB SDK</name>
     <url>http://maven.apache.org</url>
@@ -133,8 +133,7 @@
     
 	<distributionManagement>
         <repository>
-            <id>dist-repo-releases</id>
-            <name>dist-repo-releases</name>
+            <id>artifact-releases</id>
             <url>${distRepoReleasesUrl}</url>
         </repository>
 		<snapshotRepository>
